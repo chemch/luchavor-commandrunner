@@ -10,6 +10,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.neo4j.repository.config.EnableNeo4jRepositories;
 
+import com.luchavor.commandrunner.data.CompositeTechniqueRepository;
+import com.luchavor.commandrunner.data.SingleTechniqueRepository;
+
 @SpringBootApplication
 @EnableNeo4jRepositories
 public class Command1Application {
