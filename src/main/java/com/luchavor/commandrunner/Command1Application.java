@@ -24,27 +24,36 @@ public class Command1Application {
 		System.exit(0);
 	}
 
+//	@Bean
+//	CommandLineRunner command1(CompositeTechniqueRepository compositeTechniqueRepository, SingleTechniqueRepository singleTechniqueRepository) {
+//		return args -> {
+//			// delete all techniques in neo4j database
+//			//compositeTechniqueRepository.deleteAll();
+//			//singleTechniqueRepository.deleteAll();
+//			
+//			// get some sample techniques 
+//			Technique composite = compositeTechniqueRepository.findByMitreId("T1548");
+//			Technique technique = singleTechniqueRepository.findByMitreId("T1548.002");
+//			
+//			// print out technique data
+//			System.out.println(composite);
+//			System.out.println(technique);
+//			
+//			// add single technique to composite
+//			composite.add(technique);
+//			CompositeTechnique trueComp = (CompositeTechnique) composite;
+//			
+//			// save composite
+//			compositeTechniqueRepository.save(trueComp);
+//		};
+//	}
+	
 	@Bean
-	CommandLineRunner demo(CompositeTechniqueRepository compositeTechniqueRepository, SingleTechniqueRepository singleTechniqueRepository) {
+	CommandLineRunner command2(CompositeTechniqueRepository compositeTechniqueRepository, SingleTechniqueRepository singleTechniqueRepository) {
 		return args -> {
 			// delete all techniques in neo4j database
-			//compositeTechniqueRepository.deleteAll();
-			//singleTechniqueRepository.deleteAll();
-			
-			// get some sample techniques 
-			Technique composite = compositeTechniqueRepository.findByMitreId("T1548");
-			Technique technique = singleTechniqueRepository.findByMitreId("T1548.002");
-			
-			// print out technique data
-			System.out.println(composite);
-			System.out.println(technique);
-			
-			// add single technique to composite
-			composite.add(technique);
-			CompositeTechnique trueComp = (CompositeTechnique) composite;
-			
-			// save composite
-			compositeTechniqueRepository.save(trueComp);
+			compositeTechniqueRepository.deleteAll();
+			singleTechniqueRepository.deleteAll();
 		};
 	}
 }
