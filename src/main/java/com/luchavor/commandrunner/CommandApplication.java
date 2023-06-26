@@ -9,9 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.neo4j.repository.config.EnableNeo4jRepositories;
 
-import com.luchavor.commandrunner.data.AttackTechniqueRepo;
-import com.luchavor.commandrunner.data.DefendTechniqueRepo;
-import com.luchavor.commandrunner.data.TechniqueGroupRepo;
+import com.luchavor.commandrunner.persistence.AttackTechniqueRepo;
+import com.luchavor.commandrunner.persistence.DefendTechniqueRepo;
+import com.luchavor.commandrunner.persistence.TechniqueGroupRepo;
 
 @SpringBootApplication
 @EnableNeo4jRepositories

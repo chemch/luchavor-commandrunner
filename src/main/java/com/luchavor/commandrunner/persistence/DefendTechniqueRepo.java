@@ -1,4 +1,4 @@
-package com.luchavor.commandrunner.data;
+package com.luchavor.commandrunner.persistence;
 
 import java.util.List;
 import java.util.UUID;
@@ -6,9 +6,9 @@ import java.util.UUID;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import com.luchavor.datamodel.technique.Technique;
-import com.luchavor.neo4japi.model.DefendTechniqueGroup;
+import com.luchavor.neo4japi.model.DefendTechnique;
 
-public interface DefendTechniqueGroupRepo extends CrudRepository<DefendTechniqueGroup, UUID> {
+public interface DefendTechniqueRepo extends CrudRepository<DefendTechnique, UUID> {
 	Technique findByMitreId(@Param("mitreId") String mitreId);
 	List<Technique> findByParentMitreId(@Param("mitreId") String mitreId);
 }
