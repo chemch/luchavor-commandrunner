@@ -5,12 +5,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.0</version>
+		<version>3.1.1</version>
 		<relativePath/>
 	</parent>
 	<groupId>com.luchavor</groupId>
 	<artifactId>commandrunner</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.3</version>
 	<name>command-runner</name>
 	<description>Adhoc Command Runner</description>
 	<properties>
@@ -38,12 +38,12 @@
 		<dependency>
 			<groupId>com.luchavor</groupId>
 			<artifactId>datamodel</artifactId>
-			<version>0.0.1</version>
+			<version>0.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>com.luchavor</groupId>
 			<artifactId>neo4japi</artifactId>
-			<version>0.0.1</version>
+			<version>0.0.3</version>
 		</dependency>
 	</dependencies>
 	<build>
