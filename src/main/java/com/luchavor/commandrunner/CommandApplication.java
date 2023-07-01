@@ -1,4 +1,3 @@
-
 package com.luchavor.commandrunner;
 
 import org.slf4j.Logger;
