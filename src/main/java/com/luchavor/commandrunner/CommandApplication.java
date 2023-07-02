@@ -8,15 +8,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.neo4j.repository.config.EnableNeo4jRepositories;
 
+import com.luchavor.commandrunner.persistence.AttackTechniqueGroupRepo;
 import com.luchavor.commandrunner.persistence.AttackTechniqueRepo;
+import com.luchavor.commandrunner.persistence.DefendTechniqueGroupRepo;
 import com.luchavor.commandrunner.persistence.DefendTechniqueRepo;
-import com.luchavor.commandrunner.persistence.TechniqueGroupRepo;
 
 @SpringBootApplication
 @EnableNeo4jRepositories
 public class CommandApplication {
-
-	@SuppressWarnings("unused")
 	private final static Logger log = LoggerFactory.getLogger(CommandApplication.class);
 
 	public static void main(String[] args) throws Exception {
@@ -25,12 +24,15 @@ public class CommandApplication {
 	}
 	
 	@Bean
-	CommandLineRunner deleteTechniques(TechniqueGroupRepo techniqueGroupRepo, AttackTechniqueRepo attackTechniqueRepo, DefendTechniqueRepo defendTechniqueRepo) {
+	CommandLineRunner deleteTechniques(AttackTechniqueGroupRepo attackTechniqueGroupRepo, DefendTechniqueGroupRepo defendTechniqueGroupRepo, 
+			AttackTechniqueRepo attackTechniqueRepo, DefendTechniqueRepo defendTechniqueRepo) {
 		return args -> {
 			// delete all techniques in neo4j database
-			techniqueGroupRepo.deleteAll();
+			attackTechniqueGroupRepo.deleteAll();
+			defendTechniqueGroupRepo.deleteAll();
 			attackTechniqueRepo.deleteAll();
 			defendTechniqueRepo.deleteAll();
+			log.info("Delete command complete.");
 		};
 	}
 }
