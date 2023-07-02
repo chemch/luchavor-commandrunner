@@ -1,4 +1,7 @@
 spring:
+  devtools:
+    livereload:
+      enabled: false
   neo4j:
     authentication:
       password: tbd
