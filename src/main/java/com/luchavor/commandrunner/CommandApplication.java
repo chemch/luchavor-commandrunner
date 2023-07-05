@@ -8,10 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.neo4j.repository.config.EnableNeo4jRepositories;
 
-import com.luchavor.commandrunner.persistence.AttackTechniqueGroupRepo;
-import com.luchavor.commandrunner.persistence.AttackTechniqueRepo;
-import com.luchavor.commandrunner.persistence.DefendTechniqueGroupRepo;
-import com.luchavor.commandrunner.persistence.DefendTechniqueRepo;
+import com.luchavor.commandrunner.persistence.event.ConnectionRepo;
+import com.luchavor.commandrunner.persistence.event.DnsEventRepo;
+import com.luchavor.commandrunner.persistence.technique.AttackTechniqueRepo;
+import com.luchavor.commandrunner.persistence.technique.DefendTechniqueRepo;
+import com.luchavor.commandrunner.persistence.techniquegroup.AttackTechniqueGroupRepo;
+import com.luchavor.commandrunner.persistence.techniquegroup.DefendTechniqueGroupRepo;
 
 @SpringBootApplication
 @EnableNeo4jRepositories
@@ -32,7 +34,17 @@ public class CommandApplication {
 			defendTechniqueGroupRepo.deleteAll();
 			attackTechniqueRepo.deleteAll();
 			defendTechniqueRepo.deleteAll();
-			log.info("Delete command complete.");
+			log.info("Delete Techniques command complete.");
+		};
+	}
+	
+	@Bean
+	CommandLineRunner deleteEvents(ConnectionRepo connectionRepo, DnsEventRepo dnsEventRepo) {
+		return args -> {
+			// delete all events in neo4j database
+			connectionRepo.deleteAll();
+			dnsEventRepo.deleteAll();
+			log.info("Delete Connections command complete.");
 		};
 	}
 }

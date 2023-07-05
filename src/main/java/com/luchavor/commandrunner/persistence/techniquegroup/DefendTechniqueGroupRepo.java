@@ -1,4 +1,4 @@
-package com.luchavor.commandrunner.persistence;
+package com.luchavor.commandrunner.persistence.techniquegroup;
 
 import java.util.List;
 import java.util.UUID;
