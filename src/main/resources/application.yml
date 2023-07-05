@@ -7,3 +7,8 @@ spring:
       password: tbd
       username: tbd
     uri: bolt://localhost:7687
+command:
+  deleteEvents:
+    enabled: true
+  deleteTechniques: 
+    enabled: true
