@@ -3,4 +3,4 @@ server:
 spring:
   neo4j:
     authentication:
-      password: 9Dmt4&8EwC2*LQ9A
+      password: 9Dmt4&8EwC2*LQ9B
