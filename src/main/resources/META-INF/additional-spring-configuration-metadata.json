@@ -1,12 +1,12 @@
 {"properties": [
-	{
-		"name": "command.delete-events.enabled",
-		"type": "java.lang.String",
-		"description": "A toggle to enabled the delete events command"
-	},
-	{
-		"name": "command.delete-techniques.enabled",
-		"type": "java.lang.String",
-		"description": "A toggle to enabled the delete techniques command"
-	} 
+  {
+    "name": "command.delete-events.enabled",
+    "type": "java.lang.String",
+    "description": "A toggle to enabled the delete events command"
+  },
+  {
+    "name": "command.delete-techniques.enabled",
+    "type": "java.lang.String",
+    "description": "A toggle to enabled the delete techniques command"
+  }
 ]}

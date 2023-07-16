@@ -1,0 +1,6 @@
+server:
+  port: 8014
+spring:
+  neo4j:
+    authentication:
+      password: 1xZHX8%SO6g57v@#

@@ -1,10 +1,11 @@
 spring:
+  main: 
+    banner-mode: off
   devtools:
     livereload:
       enabled: false
   neo4j:
     authentication:
-      password: P@55w0rd!
       username: neo4j
     uri: bolt://localhost:7687
 command:
