@@ -17,3 +17,5 @@ command:
     enabled: true
   deleteInferences: 
     enabled: true
+  deleteFindings: 
+    enabled: true

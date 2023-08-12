@@ -18,5 +18,10 @@
     "name": "command.deleteInferences.enabled",
     "type": "java.lang.String",
     "description": "A toggle to enable the delete inferences command"
+  },
+  {
+    "name": "command.deleteFindings.enabled",
+    "type": "java.lang.String",
+    "description": "A toggle to enable the delete findings command"
   }
 ]}
