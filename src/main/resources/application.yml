@@ -9,7 +9,11 @@ spring:
       username: neo4j
     uri: bolt://localhost:7687
 command:
-  deleteEvents:
+  deleteArtifacts:
     enabled: true
   deleteTechniques: 
+    enabled: true
+  deleteDetections: 
+    enabled: true
+  deleteInferences: 
     enabled: true

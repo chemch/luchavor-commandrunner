@@ -1,12 +1,22 @@
 {"properties": [
   {
-    "name": "command.delete-events.enabled",
+    "name": "command.delete-artifacts.enabled",
     "type": "java.lang.String",
-    "description": "A toggle to enabled the delete events command"
+    "description": "A toggle to enable the delete artifacts command"
   },
   {
     "name": "command.delete-techniques.enabled",
     "type": "java.lang.String",
-    "description": "A toggle to enabled the delete techniques command"
+    "description": "A toggle to enable the delete techniques command"
+  },
+  {
+    "name": "command.deleteDetections.enabled",
+    "type": "java.lang.String",
+    "description": "A toggle to enable the delete detections command"
+  },
+  {
+    "name": "command.deleteInferences.enabled",
+    "type": "java.lang.String",
+    "description": "A toggle to enable the delete inferences command"
   }
 ]}

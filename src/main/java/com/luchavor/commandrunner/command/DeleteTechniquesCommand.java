@@ -5,10 +5,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.stereotype.Component;
 
-import com.luchavor.commandrunner.persistence.technique.AttackTechniqueRepo;
-import com.luchavor.commandrunner.persistence.technique.DefendTechniqueRepo;
-import com.luchavor.commandrunner.persistence.techniquegroup.AttackTechniqueGroupRepo;
-import com.luchavor.commandrunner.persistence.techniquegroup.DefendTechniqueGroupRepo;
+import com.luchavor.neo4japi.persistence.technique.AttackTechniqueRepo;
+import com.luchavor.neo4japi.persistence.technique.DefendTechniqueRepo;
+import com.luchavor.neo4japi.persistence.techniquegroup.AttackTechniqueGroupRepo;
+import com.luchavor.neo4japi.persistence.techniquegroup.DefendTechniqueGroupRepo;
 
 import lombok.extern.slf4j.Slf4j;
 
