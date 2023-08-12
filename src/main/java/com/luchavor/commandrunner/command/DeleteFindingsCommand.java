@@ -5,10 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.context.annotation.Configuration;
 
-import com.luchavor.neo4japi.persistence.detection.DetectionRepo;
 import com.luchavor.neo4japi.persistence.detection.ZeekNotificationRepo;
-import com.luchavor.neo4japi.persistence.detection.state.ClosedDetectionStateRepo;
-import com.luchavor.neo4japi.persistence.detection.state.OpenDetectionStateRepo;
 import com.luchavor.neo4japi.persistence.finding.FindingRepo;
 import com.luchavor.neo4japi.persistence.finding.state.ConfirmedFindingStateRepo;
 import com.luchavor.neo4japi.persistence.finding.state.PotentialFindingStateRepo;
