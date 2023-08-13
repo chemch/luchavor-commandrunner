@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: local, dev, qa, prod, test
   main: 
     banner-mode: off
   devtools:

@@ -23,5 +23,10 @@
     "name": "command.deleteFindings.enabled",
     "type": "java.lang.String",
     "description": "A toggle to enable the delete findings command"
+  },
+  {
+    "name": "command.delete-artifacts.enabled",
+    "type": "java.lang.String",
+    "description": "A description for 'command.delete-artifacts.enabled'"
   }
 ]}
