@@ -5,6 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.context.annotation.Configuration;
 import com.luchavor.neo4japi.persistence.artifact.ArtifactRepo;
+import com.luchavor.neo4japi.persistence.artifact.network.observation.ObservedHostRepo;
 import com.luchavor.neo4japi.persistence.artifact.network.session.ConnectionRepo;
 import com.luchavor.neo4japi.persistence.artifact.network.session.DnsEventRepo;
 import com.luchavor.neo4japi.persistence.artifact.network.session.HttpEventRepo;
@@ -31,12 +32,16 @@ public class DeleteArtifactsCommand implements CommandLineRunner {
 	@Autowired 
 	HttpEventRepo httpEventRepo;
 	
+	@Autowired
+	ObservedHostRepo observedHostRepo; 
+	
 	@Override
 	public void run(String... args) throws Exception {
 		artifactRepo.deleteAll();
 		sessionRepo.deleteAll();
 		// delete all events and encompassing objects
 		connectionRepo.deleteAll();
+		observedHostRepo.deleteAll();
 		dnsEventRepo.deleteAll();
 		httpEventRepo.deleteAll();
 		log.info("Delete Artifacts command complete.");
